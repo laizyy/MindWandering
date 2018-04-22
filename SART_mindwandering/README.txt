@@ -1,0 +1,6 @@
+
+The "GenerateStimuli" folder:
+This folder contains the "clean" stimulus lists, with all of the information about the stimuli, apart from the actual words themselves. The stimulus words can be found in the "newNewWords.csv" file. The function "GenerateList" in the R script "GenerateList.R" shuffles the stimulus words, inserts them at the right place in the clean lists and adds the concern words. A folder named "Subj", followed by the subject number (e.g. "Subj1") has to be created in the working directory in order for the function to work. It then outputs the filled stimulus lists in this folder.
+
+The "Task" folder:
+This folder contains the python code for the experiment. "SARTmathanja.py" runs the experiment, while "my.py" contains all of the functions. Once the stimulus lists are created, they have to be placed in the same directory as the ".py" files, alongside the practice stimuli, which are contained in the "Prac.csv" file. After running the experiment, the behavioural data will be saved in the "data" folder, whereas the ".edf" files with the eye-tracking data will end up in the main folder with the ".py" files and the stimulus lists.

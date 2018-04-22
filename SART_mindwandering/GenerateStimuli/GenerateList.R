@@ -1,0 +1,74 @@
+
+## Generates a randomised list of the stimulus words and adds the concerns
+# The concern arguments should be vectors of 3 character strings
+
+GenerateList <- function(SubjectNumber){
+  
+  library(data.table)
+
+  # Read in clean lists
+  list1 <- as.data.table(read.table("Block_1_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list2 <- as.data.table(read.table("Block_2_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list3 <- as.data.table(read.table("Block_3_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list4 <- as.data.table(read.table("Block_4_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list5 <- as.data.table(read.table("Block_5_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list6 <- as.data.table(read.table("Block_6_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list7 <- as.data.table(read.table("Block_7_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  list8 <- as.data.table(read.table("Block_8_clean.csv", 
+    header = TRUE, sep = ";", stringsAsFactors = FALSE))
+  
+  # Read in all stimulus words
+  newNewWords <- read.table("newNewWords-copy.csv", sep = ";")
+  
+  # Shuffle stimulus words
+  newNewWords <- as.vector(sample(newNewWords$x, 312))
+  
+  # Add new stimuli
+  list1$stimuli[list1$trialType == 1 | list1$trialType == 2
+                ] <- as.character(rep(newNewWords[1:39], 2))
+  list2$stimuli[list2$trialType == 1 | list2$trialType == 2
+                ] <- as.character(rep(newNewWords[40:78], 2))
+  list3$stimuli[list3$trialType == 1 | list3$trialType == 2
+                ] <- as.character(rep(newNewWords[79:117], 2))
+  list4$stimuli[list4$trialType == 1 | list4$trialType == 2
+                ] <- as.character(rep(newNewWords[118:156], 2))
+  list5$stimuli[list5$trialType == 1 | list5$trialType == 2
+                ] <- as.character(rep(newNewWords[157:195], 2))
+  list6$stimuli[list6$trialType == 1 | list6$trialType == 2
+                ] <- as.character(rep(newNewWords[196:234], 2))
+  list7$stimuli[list7$trialType == 1 | list7$trialType == 2
+                ] <- as.character(rep(newNewWords[235:273], 2))
+  list8$stimuli[list8$trialType == 1 | list8$trialType == 2
+                ] <- as.character(rep(newNewWords[274:312], 2))
+  
+  # Replace targets by capital letters
+  list1$stimuli[list1$trialType == 2] <- toupper(list1$stimuli[list1$trialType == 2])
+  list2$stimuli[list2$trialType == 2] <- toupper(list2$stimuli[list2$trialType == 2])
+  list3$stimuli[list3$trialType == 2] <- toupper(list3$stimuli[list3$trialType == 2])
+  list4$stimuli[list4$trialType == 2] <- toupper(list4$stimuli[list4$trialType == 2])
+  list5$stimuli[list5$trialType == 2] <- toupper(list5$stimuli[list5$trialType == 2])
+  list6$stimuli[list6$trialType == 2] <- toupper(list6$stimuli[list6$trialType == 2])
+  list7$stimuli[list7$trialType == 2] <- toupper(list7$stimuli[list7$trialType == 2])
+  list8$stimuli[list8$trialType == 2] <- toupper(list8$stimuli[list8$trialType == 2])
+  
+  
+  
+  # Write the new lists
+  write.table(list1, paste0("Subj", SubjectNumber, "/Block_1_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list2, paste0("Subj", SubjectNumber, "/Block_2_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list3, paste0("Subj", SubjectNumber, "/Block_3_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list4, paste0("Subj", SubjectNumber, "/Block_4_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list5, paste0("Subj", SubjectNumber, "/Block_5_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list6, paste0("Subj", SubjectNumber, "/Block_6_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list7, paste0("Subj", SubjectNumber, "/Block_7_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+  write.table(list8, paste0("Subj", SubjectNumber, "/Block_8_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
+}
+
+GenerateList(SubjectNumber = 98)

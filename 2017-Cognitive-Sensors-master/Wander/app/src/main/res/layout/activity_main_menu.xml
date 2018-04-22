@@ -1,0 +1,197 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.teamwan.wander.MainMenu">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:translationZ="1dp"
+        android:visibility="invisible"
+        android:weightSum="1"
+        android:background="@color/black_overlay"
+        android:gravity="center_vertical"
+        android:id="@+id/Overlay">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light"
+            android:layout_margin="20dp"
+            android:id="@+id/ContentBox"
+            android:visibility="invisible"
+            android:clickable="true">
+
+            <TextView
+                android:text="@string/ICATitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/OverlayTitle"
+                android:translationZ="3dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="32dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/ICABody"
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:minLines="15"
+                android:scrollbars="vertical"
+                android:text="@string/ICABody"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:translationZ="3dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/ICAAccept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="25"
+                android:onClick="onClickICAAcceptReject"
+                android:text="@string/ICAAccept"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="30sp"
+                android:translationZ="3dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:text="@string/Reject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ICAReject"
+                android:textColor="@color/colorPrimaryDark"
+                android:textAlignment="center"
+                android:textSize="@dimen/ICAARSize"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                android:onClick="onClickICAAcceptReject" />
+
+            <TextView
+                android:id="@+id/InfoClose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClickInfo"
+                android:paddingTop="15dp"
+                android:text="@string/InfoClose"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/wandertitle"
+            android:contentDescription="@string/content_description_title"
+            android:id="@+id/Title" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom|center"
+            android:weightSum="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="57dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/gametitle1"
+                android:contentDescription="@string/content_description_game_title_1"
+                android:id="@+id/GameTitle1" />
+
+            <TextView
+                android:id="@+id/DescriptionBox1"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="@string/DigitsDescription"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:onClick="onClickStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/start"
+                android:contentDescription="@string/content_description_start"
+                android:id="@+id/Start" />
+
+            <ImageView
+                android:id="@+id/Questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description_options"
+                android:onClick="onClickQuestions"
+                app:srcCompat="@drawable/questions" />
+
+            <ImageView
+                android:onClick="onClickOptions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/options"
+                android:contentDescription="@string/content_description_options"
+                android:id="@+id/Options" />
+
+            <ImageView
+                android:onClick="onClickInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/info"
+                android:contentDescription="@string/content_description_info"
+                android:id="@+id/Info" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <ImageView
+                android:onClick="onClickDebug"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/credit"
+                android:contentDescription="@string/content_description_credit"
+                android:id="@+id/Credit" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">Wander</string>
+    <string name="API_URL">https://script.google.com/macros/s/AKfycbx9l-FlFx56xASrEdKwixhHAc5YgEYRMC8qH6RgUjfHwsf8AnZW/exec</string>
+    <string name="DigitsDescription">You will see digits on the screen, and your task is to click each
+        digit as soon as it appears, but to withhold your response when the digit is the number 3. We
+        know that people daydream. Every now and then, you will be asked about your thoughts just prior
+        to the prompt. Please respond to those as accurately as possible.</string>
+    <string name="ICATitle">Informed Consent Agreement</string>
+    <string name="ICABody">I hereby consent to be a participant in the research performed by Dr. Marieke van Vugt. I have agreed to take part in the study entitled "thoughts in daily life" and I understand that my participation is entirely voluntary. I understand that my responses will be kept strictly confidential and anonymous. I have the option to withdraw from this study at any time, without penalty, and I also have the right to request that my responses not be used. The goal of this study is to better understand how cognitive function changes in the course of daily life.
+        \n\nParticipation in this study will help us to bridge between laboratory studies of cognitive function and cognition during daily life. I shall be asked to make judgments about numbers and other stimuli, and answer questions about my thoughts during the task. Each of the games will last a few minutes, and I will be asked to participate in these games daily for a period of a few weeks.
+        \n\nMy responses will be treated confidentially and my anonymity will be ensured. Hence, my responses cannot be identifiable and linked back to me as an individual. </string>
+    <string name="ICAAccept">Accept</string>
+
+    <string name="title_activity_options">OptionsActivity</string>
+    <string name="OptionsTitle">OPTIONS</string>
+    <string name="OptionNotification">Notification Frequency</string>
+    <string name="OptionsNever">Never</string>
+    <string name="OptionsDaily">Daily</string>
+    <string name="OptionsWeekly">Weekly</string>
+    <string name="Confirm">CONFIRM</string>
+    <string name="Positive">Positive</string>
+    <string name="Negative">Negative</string>
+    <string name="SliderQuestion">What was the valence of your recent thought?</string>
+    <string name="RevokeConsent">Revoke Data Gathering Consent</string>
+    <string name="TapToRevoke">Tap Here To Revoke Consent</string>
+    <string name="ConsentNotGiven">Consent Not Given</string>
+    <string name="ConsentRevoked">Consent Revoked</string>
+    <string name="Reject">Reject</string>
+    <string name="InfoTitle">INFO</string>
+    <string name="InfoBody">Wander is a cognitive sensing app created by Team Wan, a team of Computing
+        Science students at the University of Groningen in the Netherlands. The application was created
+        in partnership with Marieke van Vugt, an Assistant Professor in the Cognitive Modelling Group at
+        the University of Groningen. \n\n
+        With this app, the Cognitive Modelling Group would like to learn more about how the human mind works,
+        and how its ability to perform changes over time. Moreover, we want to give you, the user, insight into
+        your own brain as well. By using this app, and consenting to having your anonymous game data sent
+        to us, you are contributing to real research into how the human mind works.</string>
+    <string name="InfoClose">CLOSE</string>
+
+    <string name="SAVE">SAVE</string>
+    <string name="SAVED">SAVED</string>
+
+    <string name="title_activity_feedback">Feedback</string>
+    <string name="YourFeedback">Your Feedback</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="AverageResponseTime">Average Response Time:</string>
+    <string name="ThisSession">This Session:</string>
+    <string name="CorrectTapPercentage">Correct Tap Percentage</string>
+
+    <!-- Content descriptions -->
+    <string name="content_description_quit">Quit</string>
+    <string name="content_description_title">Wander: A cognitive sensing app</string>
+    <string name="content_description_game_title_1">Digits</string>
+    <string name="content_description_start">Start</string>
+    <string name="content_description_options">Options</string>
+    <string name="content_description_info">Info</string>
+    <string name="content_description_credit">Credit</string>
+    <string name="Questionnaire">QUESTIONNAIRE</string>
+    <string name="title_activity_questions">Questions</string>
+    <string name="Questions">QUESTIONS</string>
+    <string name="QuestionsText">In addition to playing the digits game, you can also complete a questionnaire regarding your mood. This can help give researchers an insight into how your mood can affect performance in the task. Tap below to copy your User ID and click through to the questionnaire where you can paste your ID and submit your answers.</string>
+    <string name="CopyUserID">Tap here to copy your User ID.</string>
+    <string name="TapForQuestionnaire" >Tap here to go to the questionnaire.</string>
+    <string name="TapToCopy">Tap to copy your User ID.</string>
+    <string name="CopyFirst">Copy your ID to go to questionnaire.</string>
+    <string name="Back">BACK</string>
+
+</resources>
