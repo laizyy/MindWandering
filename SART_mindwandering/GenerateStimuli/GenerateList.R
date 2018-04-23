@@ -25,7 +25,7 @@ GenerateList <- function(SubjectNumber){
     header = TRUE, sep = ";", stringsAsFactors = FALSE))
   
   # Read in all stimulus words
-  newNewWords <- read.table("newNewWords-copy.csv", sep = ";")
+  newNewWords <- read.table("newNewWords.csv", sep = ";")
   
   # Shuffle stimulus words
   newNewWords <- as.vector(sample(newNewWords$x, 312))
@@ -71,4 +71,4 @@ GenerateList <- function(SubjectNumber){
   write.table(list8, paste0("Subj", SubjectNumber, "/Block_8_Ned.csv"), quote = FALSE, sep = ";", row.names = FALSE)
 }
 
-GenerateList(SubjectNumber = 98)
+GenerateList(SubjectNumber = 901)
