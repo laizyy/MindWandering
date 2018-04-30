@@ -125,6 +125,7 @@ public class NumberGame extends AppCompatActivity {
         questionList = new DBHelper(this).getQuestions();
 
         numberDisplay = (TextView) findViewById(R.id.numberDisplay);
+        callNextQuestion(0);
         genNewNumber();
     }
 
@@ -201,7 +202,7 @@ public class NumberGame extends AppCompatActivity {
 
         if (successCounter + failCounter >= nextQuestionAt) {
             nextQuestionAt += 10 + rn.nextInt(3);
-            callNextQuestion(0);
+            callNextQuestion(3);
         } else
             genNewNumber();
     }
