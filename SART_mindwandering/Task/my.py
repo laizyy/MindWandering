@@ -35,7 +35,7 @@ def presentStimuli(win, aStimulus, clock, answerKey, EDFfilename):
     word = visual.TextStim(win, 
         text=str(aStimulus), 
         color='Black', 
-        font='Arial', height=0.8)
+        font='Arial', height=1.0)
     mask = visual.TextStim(win, 
         text="XXXXXXXXXXXXXXXXXXXX", 
         color='Black', 
@@ -113,7 +113,7 @@ def presentStimuli(win, aStimulus, clock, answerKey, EDFfilename):
 def presentStartQuestion1(win, startQuestionStim1, EDFfilename):
     ## Presents a first start question 
     
-    questionScale1 = visual.RatingScale(win, choices=['1', '2', '3', '4', '5'])
+    questionScale1 = visual.RatingScale(win, choices=['1', '2', '3', '4'])
     item = startQuestionStim1
     while questionScale1.noResponse:
         item.draw()
@@ -138,7 +138,7 @@ def presentStartQuestion1(win, startQuestionStim1, EDFfilename):
 def presentStartQuestion2(win, startQuestionStim2, EDFfilename):
     ## Presents a second start question.
     
-    questionScale2 = visual.RatingScale(win, choices=['1', '2', '3', '4', '5'])
+    questionScale2 = visual.RatingScale(win, choices=['1', '2', '3', '4'])
     item = startQuestionStim2
     while questionScale2.noResponse:
         item.draw()
