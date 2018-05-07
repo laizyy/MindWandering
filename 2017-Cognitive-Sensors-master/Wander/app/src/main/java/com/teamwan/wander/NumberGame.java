@@ -202,7 +202,7 @@ public class NumberGame extends AppCompatActivity {
 
         if (successCounter + failCounter >= nextQuestionAt) {
             nextQuestionAt += 10 + rn.nextInt(3);
-            callNextQuestion(3);
+            callNextQuestion(4);
         } else
             genNewNumber();
     }
